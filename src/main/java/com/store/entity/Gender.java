@@ -6,26 +6,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Season extends AbstractEntity {
-    private String dName;
-    @OneToMany(mappedBy = "season")
+public class Gender extends AbstractEntity{
+    private String bName;
+
+    @OneToMany(mappedBy = "gender")
     private List<Clothes> clothesList = new ArrayList<>();
 
+    public Gender() {
 
-    public Season() {
     }
-
-    public Season(String dName, List<Clothes> clothesList) {
-        this.dName = dName;
+    public Gender(String bName, List<Clothes> clothesList){
+        this.bName = bName;
         this.clothesList = clothesList;
     }
 
-    public String getcName() {
-        return dName;
+    public String getbName() {
+        return bName;
     }
 
-    public void setdName(String dName) {
-        this.dName = dName;
+    public void setbName(String bName) {
+        this.bName = bName;
     }
 
     public List<Clothes> getClothesList() {

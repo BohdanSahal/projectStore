@@ -1,6 +1,6 @@
 package com.store.serviceImpl;
 
-import com.store.entity.ClothesGender;
+import com.store.entity.Gender;
 import com.store.repository.ClothesGenderRepository;
 import com.store.service.ClothesGenderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +19,17 @@ public class ClothesGenderServiceImpl implements ClothesGenderService {
     }
 
     @Override
-    public Iterable<ClothesGender> findAll() {
+    public Iterable<Gender> findAll() {
         return clothesGenderRepository.findAll();
     }
 
     @Override
-    public Optional<ClothesGender> findOne(Long id) {
+    public Optional<Gender> findOne(Long id) {
         return clothesGenderRepository.findById(id);
     }
 
     @Override
-    public ClothesGender save(ClothesGender brand) {
+    public Gender save(Gender brand) {
         return clothesGenderRepository.save(brand);
     }
 
