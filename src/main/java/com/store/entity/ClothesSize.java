@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 public class ClothesSize extends AbstractEntity{
-    private String bName;
+    private String csName;
     @OneToMany(mappedBy = "clothesSize")
     private List<Clothes> clothesList = new ArrayList<>();
 
@@ -16,17 +16,17 @@ public class ClothesSize extends AbstractEntity{
 
     }
 
-    public ClothesSize(String bName, List<Clothes> clothesList) {
-        this.bName = bName;
+    public ClothesSize(String csName, List<Clothes> clothesList) {
+        this.csName = csName;
         this.clothesList = clothesList;
     }
 
-    public String getbName() {
-        return bName;
+    public String getcsName() {
+        return csName;
     }
 
-    public void setbName(String bName) {
-        this.bName = bName;
+    public void setcsName(String csName) {
+        this.csName = csName;
     }
 
     public List<Clothes> getClothesList() {

@@ -26,8 +26,8 @@ public class ClothesMaterialServiceImpl implements ClothesMaterialService {
         return clothesMaterialRepository.findById(id);
     }
     @Override
-    public ClothesMaterial save(ClothesMaterial brand){
-        return  clothesMaterialRepository.save(brand);
+    public ClothesMaterial save(ClothesMaterial clothesMaterial){
+        return  clothesMaterialRepository.save(clothesMaterial);
     }
     @Override
     public void delete(Long id){
